@@ -1,8 +1,10 @@
+import Head from "../head";
 
 
 export default function Page () {
   return (
     <>
+      <Head title="About Us | Demo blog" />
       <div className="py-8">
           <h1 className="text-6xl font-bold text-teal-700 border-b-8 pb-4 border-b-teal-700 inline-block mb-4">About Us</h1>
 

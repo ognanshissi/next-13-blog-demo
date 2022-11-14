@@ -15,7 +15,7 @@ export default function Nav () {
       <div className="container mx-auto flex justify-between items-center">
         
         <div className="text-white font-bold">
-          <Link href={`/`}>Logo</Link>
+          <Link href={`/`}>Demo Blog</Link>
         </div>
 
         <div className="flex justify-between space-x-2">

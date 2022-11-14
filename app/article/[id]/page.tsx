@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import Head from "../../head";
 
 async function getPostDetail(id: string) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -12,6 +13,7 @@ export default async function Page({ params }: {params: {id: string}}) {
 
   return (
     <>
+      <Head title={article.title} description={article.body} />
       <div className="pt-8 flex">
        <div className="w-2/3">
         <h1 className="text-teal-700 font-extrabold text-6xl pb-6">{ article.title }</h1>
