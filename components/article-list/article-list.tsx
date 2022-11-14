@@ -1,4 +1,3 @@
-import Link from "next/link";
 import ArticleItem from "../article-item/article-item";
 
 async function getData() {
