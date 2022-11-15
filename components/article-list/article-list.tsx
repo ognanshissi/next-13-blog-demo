@@ -1,21 +1,18 @@
 import ArticleItem from "../article-item/article-item";
+import {ArticleModel} from "../../lib/models/article.model";
 
-async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=6');
-  return res.json();
-} 
+export interface ArticleListProps {
+    articles: ArticleModel[]
+}
 
-
-export default async function ArticleList () {
-
-  const posts: any[] = await getData();
+export default function ArticleList ({articles}: ArticleListProps) {
 
   return (
     <>
       <div className="grid grid-cols-4 gap-4 mt-8">
-        {posts.map((item, key) => (
-            <ArticleItem  article={item} key={key}/>
-        ))}
+          {articles.map((item, key) => (
+              <ArticleItem  article={item} key={key}/>
+          ))}
       </div>
     </>
   )

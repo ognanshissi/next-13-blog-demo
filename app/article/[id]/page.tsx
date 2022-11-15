@@ -1,13 +1,12 @@
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 import Head from "../../head";
+import Link from 'next/link';
 
 async function getPostDetail(id: string) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
   return res.json();
 }
 
-export default async function Page({ params }: {params: {id: string}}) {
+export default async function ArticleDetailPage({ params }: {params: {id: string}}) {
 
   const article = await getPostDetail(params.id)
 
@@ -23,7 +22,7 @@ export default async function Page({ params }: {params: {id: string}}) {
         <hr/>
         
         <div className="text-black font-semibold pt-4">
-        <Link href={`/`}> Go Back</Link>
+           <Link href={'/'}>Go Back</Link>
         </div>
        </div>
       </div>

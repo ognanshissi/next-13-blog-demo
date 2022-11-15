@@ -1,6 +1,9 @@
-import { defaultHead } from "next/head";
+export interface HeadProps {
+    title?: string;
+    description?: string
+}
 
-const  Head = ({title, description}: {title: string, description: string}) => {
+const  Head = ({title, description }: HeadProps) => {
   return (
     <>
       <title>{ title }</title>
