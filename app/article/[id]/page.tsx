@@ -2,7 +2,7 @@ import Head from "../../head";
 import Link from 'next/link';
 
 async function getPostDetail(id: string) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { });
   return res.json();
 }
 
@@ -20,7 +20,7 @@ export default async function ArticleDetailPage({ params }: {params: {id: string
           { article.body }
         </div>
         <hr/>
-        
+
         <div className="text-black font-semibold pt-4">
            <Link href={'/'}>Go Back</Link>
         </div>
